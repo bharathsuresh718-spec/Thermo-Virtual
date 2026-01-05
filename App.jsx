@@ -140,8 +140,14 @@ export default function App() {
     }));
     return { Q, LMTD, U, data, Efficiency };
   }, [config, mat]);
-
+<div style={{ 
+  display: 'flex', 
+  flexDirection: window.innerWidth < 768 ? 'column' : 'row', // This is the "Responsive" magic
+  width: '100vw', 
+  height: '100vh' 
+}}></div>
   return (
+    
     <div style={{ width: '100vw', height: '100vh', display: 'flex', background: '#020617', color: '#f1f5f9', overflow: 'hidden', fontFamily: 'sans-serif' }}>
       
       {/* COLUMN 1: CONFIGURATOR */}
