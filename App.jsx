@@ -84,7 +84,28 @@ const Models = {
     </group>
   )
 };
-
+const BrandHeader = () => (
+  <div style={{ 
+    marginBottom: '40px', 
+    borderBottom: '1px solid rgba(0, 242, 255, 0.2)', 
+    paddingBottom: '15px' 
+  }}>
+    <h1 style={{ 
+      fontSize: '26px', 
+      fontWeight: '900', 
+      letterSpacing: '2px', 
+      color: '#00f2ff', 
+      textShadow: '0 0 15px rgba(0, 242, 255, 0.6)',
+      margin: 0,
+      fontFamily: 'monospace'
+    }}>
+      THERMOSCALE
+    </h1>
+    <div style={{ fontSize: '9px', color: '#94a3b8', marginTop: '5px', letterSpacing: '1px' }}>
+      PRECISION THERMAL ANALYTICS
+    </div>
+  </div>
+);
 export default function App() {
   const [config, setConfig] = useState({
     model: 'ShellTube',
@@ -125,6 +146,7 @@ export default function App() {
       
       {/* COLUMN 1: CONFIGURATOR */}
       <div style={{ width: '320px', padding: '24px', background: '#0f172a', borderRight: '1px solid #1e293b' }}>
+        <BrandHeader />
         <h2 style={{ color: '#3b82f6', fontSize: '18px', fontWeight: 'bold', marginBottom: '30px' }}>CONFIGURATOR</h2>
         
         {[
